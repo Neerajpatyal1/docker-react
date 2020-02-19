@@ -10,6 +10,7 @@ script:
 
     # deploy the application on AWS elastic beanstalk if test are passed 
 deploy:
+    edge: true
     provider: elasticbeanstalk
     region: "us-east-1"
     app: "docker-react"
@@ -17,7 +18,7 @@ deploy:
     bucket_name: "elasticbeanstalk-us-east-1-278603474805"
     bucket_path: "docker-react"
     on:
-      branch: master
+      branch: master  # means only deploy the code when master branch received the code 
 
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key:
