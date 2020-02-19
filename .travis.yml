@@ -10,7 +10,7 @@ script:
 
     # deploy the application on AWS elastic beanstalk if test are passed 
 deploy:
-    edge: true
+    #edge: true
     provider: elasticbeanstalk
     region: "us-east-1"
     app: "docker-react"
